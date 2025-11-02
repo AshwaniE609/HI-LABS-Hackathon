@@ -32,7 +32,7 @@ This repository contains a **Medical Specialty Standardization System** that map
 
 1. **Clone the Repository**
    ```bash
-   git clone <your-repository-url>
+   git clone https://github.com/AshwaniE609/HI-LABS-Hackathon
    cd specialty-standardization
    ```
 
@@ -546,83 +546,6 @@ raw_specialty,NUCC_Codes,Confidence,Junk
 
 ---
 
-## Usage Examples
-
-### Example 1: Basic Usage in Jupyter
-
-```python
-import pandas as pd
-from Final_submission import ProviderSpecialtyStandardizer
-
-# 1. Load NUCC reference data
-nucc_df = pd.read_csv('NUC_tech_economy.csv')
-
-# 2. Load input specialties
-input_df = pd.read_csv('input_specialties.csv')
-
-# 3. Initialize standardizer
-standardizer = ProviderSpecialtyStandardizer(nucc_df)
-
-# 4. Run standardization
-output_df = standardizer.standardize(
-    input_df,
-    specialty_column='raw_specialty'
-)
-
-# 5. Generate metrics
-metrics = standardizer.compute_validation_metrics(output_df)
-
-# 6. Save outputs
-output_df.to_csv('output_standardized_CORRECTED.csv', index=False)
-
-print("✓ Processing complete!")
-print(f"Success rate: {metrics['mapping_success_rate']}%")
-```
-
-### Example 2: Handling Multi-Specialty Records
-
-```python
-# Input with multiple specialties
-input_data = pd.DataFrame({
-    'raw_specialty': [
-        'DERMATOLOGY & ALLERGY',
-        'CARDIOLOGY/CARDIAC SURGERY',
-        'PEDIATRICS AND PSYCHIATRY'
-    ]
-})
-
-output = standardizer.standardize(input_data, 'raw_specialty')
-
-# Output shows multiple codes separated by |
-print(output[['raw_specialty', 'NUCC_Codes']])
-```
-
-### Example 3: Custom Threshold Configuration
-
-```python
-# Modify matching thresholds
-standardizer.config.FUZZY_THRESHOLD = 0.8  # Stricter matching
-standardizer.config.MIN_CONFIDENCE_FOR_ALTERNATIVE = 0.7
-
-# Re-run with new thresholds
-output_df = standardizer.standardize(input_df, 'raw_specialty')
-```
-
-### Example 4: Filtering Results
-
-```python
-# Get only high-confidence mappings
-high_confidence = output_df[output_df['Calibrated_Confidence'] >= 0.85]
-
-# Get unmapped records (JUNK)
-unmapped = output_df[output_df['Primary_Code'] == 'JUNK']
-
-# Get records with alternative matches
-with_alternatives = output_df[output_df['Alternative_Code_1'].notna()]
-```
-
----
-
 ## Performance Metrics
 
 ### Expected Performance on Standard Datasets
@@ -652,41 +575,6 @@ Based on testing with ~10,000 medical specialty records:
 
 ---
 
-## Troubleshooting
-
-### Issue: Column Name Error
-```
-Error: KeyError: 'raw_specialty'
-```
-**Solution:** Ensure your input CSV has a column named exactly `raw_specialty`
-
-### Issue: Missing NUCC Reference Data
-```
-Error: FileNotFoundError: NUC_tech_economy.csv
-```
-**Solution:** Place `NUC_tech_economy.csv` in the same directory as the notebook
-
-### Issue: Low Matching Success Rate
-```
-mapping_success_rate: 60%
-```
-**Solutions:**
-- Verify input data format and spellings
-- Adjust thresholds to be more lenient
-- Check NUCC reference data completeness
-- Review junk records for patterns
-
-### Issue: GPU Memory Exhaustion
-```
-RuntimeError: CUDA out of memory
-```
-**Solution:**
-- Use CPU instead: `device='cpu'`
-- Reduce batch size
-- Clear GPU cache between runs
-
----
-
 ## References & Documentation
 
 - **NUCC Taxonomy:** [National Uniform Claim Committee](https://www.nucc.org/)
@@ -696,9 +584,3 @@ RuntimeError: CUDA out of memory
 
 ---
 
-## License & Usage
-
-This project is provided as-is for medical specialty standardization purposes. For questions or support, please refer to the attached documentation or contact the development team.
-
-**Last Updated:** November 2025
-**Version:** 1.0.0
