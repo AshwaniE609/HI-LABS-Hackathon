@@ -533,31 +533,6 @@ Code,Display_Name
 
 ---
 
-## 📞 Support & Issues
-
-### Getting Help
-
-- **Issues**: Create a GitHub issue with detailed description
-- **Documentation**: Check the [Wiki](https://github.com/yourusername/specialty-standardization/wiki)
-- **Q&A**: Start a discussion in the Discussions tab
-
-### Reporting Bugs
-
-Include:
-- Input specialty text
-- Expected output
-- Actual output
-- Error message (if any)
-- Python version & environment
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
 ## 🏆 Acknowledgments
 
 - **NUCC Taxonomy**: Data provided by American Medical Association (AMA) & CMS
@@ -567,24 +542,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 🚀 Future Roadmap
 
-- [ ] Machine learning model fine-tuning on labeled data
-- [ ] Real-time API deployment
-- [ ] Web UI for manual verification workflows
-- [ ] Integration with EHR systems (Epic, Cerner)
-- [ ] Multi-language support
-- [ ] Automated quality assurance pipeline
-- [ ] Performance benchmarking suite
-- [ ] Specialty-specific sub-specialization handling
-
----
 
 ## 📧 Contact
 
-**Author**: Your Name  
-**Email**: your.email@example.com  
-**GitHub**: [@yourusername](https://github.com/yourusername)
+**Authors**: Ashwani Singh, Ayush Dixit, Adhiraj 
+**Email**: ashwaniks22@iitk.ac.in 
 
 ---
 
