@@ -120,16 +120,6 @@ text
 
 ---
 
-## 🚀 Quick Start
-
-### Installation
-
-git clone https://github.com/yourusername/provider-specialty-standardization.git
-cd provider-specialty-standardization
-pip install -r requirements.txt
-
-text
-
 ### Basic Usage
 
 import pandas as pd
