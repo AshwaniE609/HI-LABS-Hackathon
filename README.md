@@ -222,12 +222,6 @@ Contributions welcome! Areas for improvement:
 
 ---
 
-## 📄 License
-
-MIT License - See LICENSE file for details
-
----
-
 ## ✨ Results Summary
 
 🎯 Provider Specialties: 10,050 records processed
