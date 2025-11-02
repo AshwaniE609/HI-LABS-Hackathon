@@ -142,7 +142,7 @@ specialty-standardization/
 ├── data/
 │   ├── nucc_taxonomy_master.csv                # NUCC official taxonomy (9,000+ codes)
 │   ├── input_specialties.csv                   # Sample input data
-│   └── output_specialty_explain.csv            # Sample output
+│   └── Final_Submission_output            # Sample output
 ├── src/
 │   ├── standardizer.py                         # Main standardizer class
 │   ├── preprocessor.py                         # Specialty preprocessor
@@ -500,8 +500,8 @@ Code,Display_Name
 
 ### Output Files Generated
 
-1. **output_standardized_CORRECTED.csv** - Comprehensive technical output
-2. **output_specialty_explain.csv** - Simplified business-friendly format
+1. **Output_detailed.csv** - Comprehensive technical output
+2. **Final_Submission_output** - Simplified business-friendly format
 
 ---
 
