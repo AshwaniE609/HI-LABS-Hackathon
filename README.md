@@ -61,8 +61,8 @@ specialty-standardization/
 ├── Final_submission.ipynb          # Main execution notebook
 ├── input_specialties.csv           # Input specialty names (required)
 ├── NUC_tech_economy.csv            # NUCC taxonomy reference (required)
-├── output_standardized_CORRECTED.csv # Full output with all columns
-├── output_standardized_SUMMARY.csv  # Simplified summary output
+├── output_standardized_CORRECTED.csv # Full output with all columns (detailed file for understanding)
+├── output_standardized_SUMMARY.csv  # Simplified summary output based on the PS (final output file)
 └── README.md                        # This file
 ```
 
